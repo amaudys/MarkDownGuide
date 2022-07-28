@@ -20,6 +20,7 @@
     - [Imagen](#imagen)
     - [Bloque de código](#bloque-de-código)
     - [Carácter de Escape](#carácter-de-escape)
+    - [Comentarios](#comentarios)
     - [HTML](#html)
   - [Sintaxis Extendida](#sintaxis-extendida)
     - [Tablas](#tablas)
@@ -229,6 +230,20 @@ Markdown utiliza ciertos símbolos para el marcado. Si se utilizan, el analizado
 Para utilizar estos caracteres en sentido literal, solo debes insertar una barra invertida delante de cada uno de ellos. Es importante escribir la barra invertida antes de cada carácter, por ejemplo, tanto delante del paréntesis de apertura como del de cierre.
 
 Esto es un \*ejemplo con asteriscos\*.
+
+### Comentarios
+
+Puedes ocultar el contenido del lenguaje de marcado interpretado colocando el contenido en un comentario de HTML `<!-- Comentario... -->`.
+
+<!-- Este contenido no aparecerá en el Markdown renderizado -->
+
+<!---
+tu comentario va aqui
+y aquí
+-->
+
+[comment]: <> (Este contenido no aparecerá en el Markdown renderizado)
+
 
 ### HTML
 
@@ -456,14 +471,6 @@ Muchos procesadores de Markdown convierten automáticamente las URL en enlaces. 
 Si no desea que una URL se vincule automáticamente, puede eliminar el enlace denotando la URL como código con acentos graves.
 
 `http://www.example.com`
-
-
-<!---
-your comment goes here
-and here
--->
-
-[comment]: <> (This is a comment, it will not be included)
 
 
 
