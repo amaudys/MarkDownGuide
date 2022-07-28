@@ -242,7 +242,7 @@ tu comentario va aqui
 y aquí
 -->
 
-[comment]: <> (Este contenido no aparecerá en el Markdown renderizado)
+[comment]: # (Este contenido no aparecerá en el Markdown renderizado)
 
 
 ### HTML
