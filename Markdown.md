@@ -1,12 +1,12 @@
-# Markdown
+# <img src="https://d33wubrfki0l68.cloudfront.net/f1f475a6fda1c2c4be4cac04033db5c3293032b4/513a4/assets/images/markdown-mark-white.svg" align="left" width="64" style="padding-right:10px"> Markdown 
+
 
 ***Markdown*** es un lenguaje simple que se utiliza para crear texto enriquecido (por ejemplo, HTML) con un editor de texto sin formato. Te permite darle un formato básico al texto, utilizando símbolos conocidos y accesibles en todos los teclados. El tamaño de fuente, el color y otras opciones más avanzadas no están disponibles con Markdown.
 
 <br/>
 
 # Índice
-- [Markdown](#markdown)
-- [Índice](#índice)
+
   - [Sintaxis Basica](#sintaxis-basica)
     - [Encabezados](#encabezados)
     - [Párrafos](#párrafos)
@@ -40,6 +40,7 @@
     - [Superíndice](#superíndice)
     - [Enlace de URL automático](#enlace-de-url-automático)
     - [Deshabilitar vinculación de una URL](#deshabilitar-vinculación-de-una-url)
+    - [Referencias](#referencias)
 
 
 <br/>
@@ -193,9 +194,14 @@ Realice busquedas en [_**Google**_](https://googe.com.do "Click aquí").
 
 Para agregar una imagen, agregue un signo de exclamación ( ! ), seguido del texto alternativo entre paréntesis y la ruta o URL del recurso de imagen entre paréntesis. Opcionalmente, puede agregar un título entre comillas después de la ruta o URL.
 
-![Markdown](.\markdown-mark-white.svg "Markdown")
+![Markdown_White](.\markdown-mark-white.svg "Markdown")
 
-![Vivaldi logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/175px-Markdown-mark.svg.png)
+![Markdown](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/175px-Markdown-mark.svg.png)
+
+Una imagen con un enlace a una URL:
+
+[![N|Solid](.\markdown-mark-white.svg)](https://es.wikipedia.org/wiki/Markdown)
+
 
 
 ### Bloque de código
@@ -472,5 +478,20 @@ Si no desea que una URL se vincule automáticamente, puede eliminar el enlace de
 
 `http://www.example.com`
 
+<br/>
+<br/>
 
+### Referencias
 
+- Articulo en Wikipedia sobre [Markdown][link].
+- https://www.markdownguide.org/
+- https://help.vivaldi.com/es/cuenta-y-servicios/foro/formato-markdown/
+- https://commonmark.org/help/
+- https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
+- https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/tutorial-de-markdown/
+- https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+[link]: https://es.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"
+<br/>
+<br/>
+<br/>
