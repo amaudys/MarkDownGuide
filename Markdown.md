@@ -22,6 +22,7 @@
     - [Carácter de Escape](#carácter-de-escape)
     - [Comentarios](#comentarios)
     - [HTML](#html)
+      - [Entidades HTML](#entidades-html)
   - [Sintaxis Extendida](#sintaxis-extendida)
     - [Tablas](#tablas)
       - [Alineación](#alineación)
@@ -260,9 +261,35 @@ No puede usar la sintaxis de Markdown dentro de las etiquetas HTML de nivel de b
 Ejemplo:  
 This **word** is bold. This <em>word</em> is italic.
 
+La sintaxis de Markdown está pensada para un propósito: usarse como un formato para escribir para la web.
+
+Markdown no es un reemplazo para HTML, ni siquiera se acerca a él. Su sintaxis es muy pequeña y corresponde solo a un subconjunto muy pequeño de etiquetas HTML. La idea no es crear una sintaxis que facilite la inserción de etiquetas HTML. En mi opinión, las etiquetas HTML ya son fáciles de insertar. La idea de Markdown es facilitar la lectura, escritura y edición de prosa. HTML es un formato de publicación; Markdown es un formato de escritura . Por lo tanto, la sintaxis de formato de Markdown solo aborda problemas que se pueden transmitir en texto sin formato.
+
+Para cualquier marcado que no esté cubierto por la sintaxis de Markdown, simplemente use HTML. No hay necesidad de ponerle un prefacio o delimitarlo para indicar que está cambiando de Markdown a HTML; solo usas las etiquetas.
+
+Las únicas restricciones son que los elementos HTML a nivel de bloque, por ejemplo `<div>`, `<table>`, `<pre>`, `<p>`, etc., deben estar separados del contenido circundante por líneas en blanco, y las etiquetas de inicio y final del bloque no deben sangrar con tabulaciones o espacios. Markdown es lo suficientemente inteligente como para no agregar etiquetas adicionales (no deseadas) `<p>` alrededor de las etiquetas de nivel de bloque HTML.
+
+
+#### Entidades HTML
+
+Debido a que Markdown está estrechamente relacionado con HTML, el signo de et ( & ), así como los de mayor que y menor que, tienen una gran importancia. Estos caracteres se utilizan en HTML para abrir y cerrar etiquetas ( <> ) y para trabajar con entidades ( & ). En HTML, si deseas utilizar los caracteres con su significado original, debes enmascararlos: &, < y >. En principio, en Markdown no hay ninguna razón para no poder utilizar los signos literalmente. Sin embargo, como existe la opción de combinar Markdown con HTML, la cosa se puede complicar un poco. Para que los usuarios no tengan que resolver este problema ellos mismos, el analizador comprende cuándo son caracteres simples y cuando se está utilizando el código HTML.
+
+Algunos códigos HTML:
+
+&quot;  
+AT&amp;T  
+&#38;  
+&alpha;  
+&micro;  
+&AElig;  
+&copy;  
+&euro;  
+&#36;
+
 <br/>
 <br/>
 <br/>
+
 
 ## Sintaxis Extendida
 
@@ -483,7 +510,7 @@ Si no desea que una URL se vincule automáticamente, puede eliminar el enlace de
 
 ### Referencias
 
-- Articulo en Wikipedia sobre [Markdown][link].
+- Artículo en Wikipedia sobre [Markdown][link-Wikipedia].
 - https://www.markdownguide.org/
 - https://help.vivaldi.com/es/cuenta-y-servicios/foro/formato-markdown/
 - https://commonmark.org/help/
@@ -491,7 +518,7 @@ Si no desea que una URL se vincule automáticamente, puede eliminar el enlace de
 - https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/tutorial-de-markdown/
 - https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
-[link]: https://es.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"
+[link-Wikipedia]: https://es.wikipedia.org/wiki/Markdown "Markdown - Wikipedia"
 <br/>
 <br/>
 <br/>
