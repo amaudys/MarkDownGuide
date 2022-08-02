@@ -41,6 +41,15 @@
     - [Superíndice](#superíndice)
     - [Enlace de URL automático](#enlace-de-url-automático)
     - [Deshabilitar vinculación de una URL](#deshabilitar-vinculación-de-una-url)
+    - [Tabulaciones](#tabulaciones)
+    - [Centrar](#centrar)
+    - [Color](#color)
+    - [Advertencias](#advertencias)
+    - [Image Size](#image-size)
+    - [Image Captions](#image-captions)
+    - [Link Targets](#link-targets)
+    - [Tabla de Contenidos](#tabla-de-contenidos)
+    - [Videos](#video)
     - [Referencias](#referencias)
 
 
@@ -181,15 +190,15 @@ Para crear una línea horizontal, use tres o más asteriscos ( *** ), guiones ( 
 
 ### Enlaces (Links)
 
-Para crear un enlace, encierre el texto del enlace entre corchetes ([Texto a mostrar]) y luego sígalo inmediatamente con la URL entre paréntesis (https://googe.com.do).
+Para crear un enlace, encierre el texto del enlace entre corchetes ([Texto a mostrar]) y luego sígalo inmediatamente con la URL entre paréntesis (https://google.com.do).
 
-Realice busquedas en [Google](https://googe.com.do).
+Realice busquedas en [Google](https://google.com.do).
 
 Colocar un título, escríbalo entre comillas después de la URL.
 
 Volver al [`Índice`](#índice).
 
-Realice busquedas en [_**Google**_](https://googe.com.do "Click aquí").
+Realice busquedas en [_**Google**_](https://google.com.do "Click aquí").
 
 ### Imagen
 
@@ -276,15 +285,24 @@ Debido a que Markdown está estrechamente relacionado con HTML, el signo de et (
 
 Algunos códigos HTML:
 
-&quot;  
-AT&amp;T  
-&#38;  
-&alpha;  
-&micro;  
-&AElig;  
-&copy;  
-&euro;  
-&#36;
+| Symbol                   | Code HTML |
+| ------------------------ | --------- |
+| Copyright (©)            | &copy;    |
+| Registered trademark (®) | &reg;     |
+| Trademark (™)            | &trade;   |
+| Euro (€)                 | &euro;    |
+| Dolar                    | &#36;     |
+| Up arrow (↑)             | &uarr;    |
+| Down arrow (↓)           | &darr;    |
+| Left arrow (←)           | &larr;    |
+| Right arrow (→)          | &rarr;    |
+| Degree (°)               | &#176;    |
+| Pi (π)                   | &#960;    |
+| Aesc                     | &AElig;   |
+| Alpha                    | &alpha;   |
+| micro                    | &micro;   |
+| Ampersand                | &amp;     |
+| Quoted                   | &quot;    |
 
 <br/>
 <br/>
@@ -505,8 +523,97 @@ Si no desea que una URL se vincule automáticamente, puede eliminar el enlace de
 
 `http://www.example.com`
 
-<br/>
-<br/>
+
+### Tabulaciones
+
+Las tabulaciones y los espacios en blanco tienen un significado especial en Markdown. Puede usar espacios en blanco finales para crear saltos de línea y puede usar tabuladores para crear bloques de código. Pero, ¿qué sucede si necesita sangrar un párrafo a la antigua, usando la tecla de tabulación? Markdown no proporciona una manera fácil de hacerlo.
+
+Si su procesador Markdown es compatible con HTML, puedes usar la entidad HTML para el espacio de no separación ( `&nbsp;` ). Esta probablemente debería ser tu opción de último recurso, ya que puede resultar incómodo. Básicamente, cada `&nbsp;` en su fuente de Markdown se reemplazará con un espacio en la salida renderizada. Entonces, si coloca cuatro instancias de `&nbsp;` antes de un párrafo, el párrafo se verá como si tuviera una sangría de cuatro espacios.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Esta es la primera oración de mi párrafo con sangría.
+
+
+### Centrar
+
+Tener la capacidad de centrar el texto es una necesidad al escribir un artículo o un informe. Desafortunadamente, Markdown no tiene ningún concepto de alineación de texto (una posible excepción es cuando se usan tablas ). La buena noticia es que hay una etiqueta HTML que puede usar: `<center>`. Si su procesador Markdown es compatible con HTML , puede colocar estas etiquetas alrededor de cualquier texto que desee alinear al centro.
+
+<center>Este es un texto centrado.</center>
+
+
+### Color
+
+Markdown no le permite cambiar el color del texto, pero si su procesador Markdown es compatible con HTML , puede usar la `<font>` etiqueta HTML. El color atributo le permite especificar el color de la fuente utilizando el nombre de un color o el #RRGGBB código hexadecimal.
+
+<font color="red">This text is red!</font>
+
+La `<font>` etiqueta HTML es técnicamente compatible pero oficialmente obsoleta , lo que significa que funciona por ahora, pero se supone que no debes usarla. Desafortunadamente, no hay otra alternativa HTML pura. Podría intentar usar una de las alternativas de CSS. No todas las aplicaciones de Markdown brindan soporte para CSS, pero si la que está usando lo hace, aquí hay una alternativa a la `<font>` etiqueta:
+
+<p style="color:skyblue">Make this text blue.</p>
+
+
+### Advertencias
+
+Las advertencias se utilizan con frecuencia en la documentación para llamar la atención sobre advertencias, notas y sugerencias. Markdown no proporciona una sintaxis especial para las advertencias, y la mayoría de las aplicaciones de Markdown no brindan soporte para advertencias
+
+Sin embargo, si necesita agregar advertencias, es posible que pueda usar comillas en bloque con emoji y énfasis para crear algo similar a las advertencias que ve en otros sitios web.
+
+
+> :warning: **Advertencia:** No presiones el botón rojo grande..
+
+> :memo: **Nota:** Los amaneceres son hermosos.
+
+> :bulb: **Tip:** Recuerda apreciar las pequeñas cosas de la vida.
+
+
+### Image Size
+
+La sintaxis de Markdown para imágenes no le permite especificar el ancho y el alto de las imágenes. Si necesita cambiar el tamaño de una imagen y su procesador Markdown es compatible con HTML , puede usar la imgetiqueta HTML con los atributos widthy heightpara establecer las dimensiones de una imagen en píxeles.
+
+<img src="./no-image.png" width="100" height="100">
+
+
+### Image Captions
+
+Markdown no admite títulos de imágenes de forma nativa, pero existen dos posibles soluciones. Si su aplicación Markdown es compatible con HTML , puede usar las etiquetas figurey figcaptionHTML para agregar un título a su imagen.
+
+<figure>
+    <img src="./no-image.png"
+         alt="No hay imagen">
+    <figcaption>No hay imagen.</figcaption>
+</figure>
+
+
+### Link Targets
+
+A algunas personas les gusta crear enlaces que se abren en nuevas pestañas o ventanas. La sintaxis de Markdown para enlaces no le permite especificar el target attribute, pero si su procesador Markdown es compatible con HTML, puede usar HTML para crear estos enlaces.
+
+<a href="https://www.markdownguide.org" target="_blank">Aprende Markdown!</a>
+
+
+### Tabla de Contenidos
+
+Markdown admite [ID de encabezado](#id-de-encabezado), puede crear una tabla de contenido para su archivo Markdown usando una lista y algunos enlaces.
+
+#### Table of Contents
+
+- [Enlace](#enlaces-links)
+- [Párrafos](#párrafos)
+- [Emojis](#emojis)
+- [Color](#color)
+
+
+### Videos
+
+Si su aplicación Markdown es compatible con HTML, debería poder incrustar un video en su archivo Markdown copiando y pegando el código HTML proporcionado por un sitio web de videos como YouTube o Vimeo. 
+
+Si su aplicación Markdown no es compatible con HTML, no puede incrustar un video, pero puede acercarse agregando una imagen y un enlace al video. Podría hacer esto con prácticamente cualquier video en cualquier servicio de video.
+
+[![Image alt text](https://img.youtube.com/vi/YOUTUBE-ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE-ID)
+
+YouTube genera automáticamente una imagen para cada video (https://img.youtube.com/vi/YOUTUBE-ID/0.jpg), por lo que podemos usarla y vincular la imagen al video en YouTube. Después de reemplazar el texto alternativo de la imagen y agregar la ID del video, nuestro ejemplo se ve así:
+
+[![Less Than Jake — Scott Farcas Takes It On The Chin](https://img.youtube.com/vi/PYCxct2e0zI/0.jpg)](https://www.youtube.com/watch?v=PYCxct2e0zI)
+
 
 ### Referencias
 
