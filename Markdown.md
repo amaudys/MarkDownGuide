@@ -1,6 +1,5 @@
 # <img src="https://d33wubrfki0l68.cloudfront.net/f1f475a6fda1c2c4be4cac04033db5c3293032b4/513a4/assets/images/markdown-mark-white.svg" align="left" width="64" style="padding-right:10px"> Markdown 
 
-
 ***Markdown*** es un lenguaje simple que se utiliza para crear texto enriquecido (por ejemplo, HTML) con un editor de texto sin formato. Te permite darle un formato básico al texto, utilizando símbolos conocidos y accesibles en todos los teclados. El tamaño de fuente, el color y otras opciones más avanzadas no están disponibles con Markdown.
 
 <br/>
@@ -42,6 +41,7 @@
     - [Enlace de URL automático](#enlace-de-url-automático)
     - [Deshabilitar vinculación de una URL](#deshabilitar-vinculación-de-una-url)
     - [Tabulaciones](#tabulaciones)
+    - [Salto de página](#salto-de-página)
     - [Centrar](#centrar)
     - [Color](#color)
     - [Advertencias](#advertencias)
@@ -49,7 +49,7 @@
     - [Image Captions](#image-captions)
     - [Link Targets](#link-targets)
     - [Tabla de Contenidos](#tabla-de-contenidos)
-    - [Videos](#video)
+    - [Videos](#videos)
     - [Referencias](#referencias)
 
 
@@ -62,7 +62,7 @@
 Mejores prácticas de encabezado  
 Las aplicaciones de Markdown no se ponen de acuerdo sobre cómo manejar un espacio que falta entre los signos de número ( # ) y el nombre del encabezado. Por compatibilidad, siempre ponga un espacio entre los signos numéricos y el nombre del encabezado.
 
-```
+``` text
 # Encabezado 1
 ## Encabezado 2
 ### Encabezado 3
@@ -80,7 +80,6 @@ Otra alternativa para colocar encabezados, aunque de dos niveles, serian dos == 
 | Nivel de encabezado 2<br/>  ------------------------- | <h2>Heading level 1</h2> |
 
 
-
 ### Párrafos
 Para crear párrafos, use una línea en blanco para separar una o más líneas de texto.
 
@@ -90,6 +89,7 @@ Lorem ipsum dolor sit amet, fames ac ante ipsum primis in faucibus. Aenean pulvi
 
 Cras id faucibus nisi, sed gravida leo. Donec et interdum ex, ut vestibulum ipsum. Donec vehicula efficitur pellentesque. Aliquam facilisis lectus nisl. Mauris euismod blandit mi, ultrices feugiat odio varius et. Fusce imperdiet in quam ut bibendum. Nunc nisi lorem, euismod vitae nulla ac, vestibulum pharetra eros.
 
+
 ### Saltos de línea
 
 Para hacer un salto de línea coloque dos espacios al final de la línea o `<br/>`.
@@ -97,6 +97,7 @@ Para hacer un salto de línea coloque dos espacios al final de la línea o `<br/
 Primera línea  
 Segunda línea<br/>
 Tercera línea  
+
 
 ### Estilos de fuentes
 
@@ -109,6 +110,7 @@ __Texto en negrita__
 _Texto Subrayado_  
 
 **Lorem ipsum** dolor sit amet, fames ac ante *ipsum* primis in faucibus. Aenean pulvinar vehicula felis, a suscipit ante interdum quis. _Morbi_ luctus nibh ligula, eget dapibus lacus facilisis sit amet. Proin mollis pretium est vel aliquam. Aenean iaculis ***consectetur finibus***. Orci varius <strong>natoque penatibus</strong> et magnis dis <em>parturient montes</em>, nascetur ridiculus mus. Proin in aliquam est. Aenean blandit felis maximus interdum convallis. Donec nec vulputate purus. Sed eleifend dui id pretium consectetur. Fusce imperdiet quam non dapibus lobortis. Praesent dapibus nibh in elit eleifend commodo.
+
 
 ### Bloque de citado
 
@@ -181,6 +183,7 @@ Continuar el
 
 Curiosamente, Markdown no tiene en cuenta el número real. Tanto si escribes tres veces el número uno como si comienzas con el número tres, la lista siempre se iniciará con el número correcto.
 
+
 ### Línea horizontal
 
 Para crear una línea horizontal, use tres o más asteriscos ( *** ), guiones ( --- ) o guiones bajos ( ___ ) en una sola línea.
@@ -200,6 +203,7 @@ Volver al [`Índice`](#índice).
 
 Realice busquedas en [_**Google**_](https://google.com.do "Click aquí").
 
+
 ### Imagen
 
 Para agregar una imagen, agregue un signo de exclamación ( ! ), seguido del texto alternativo entre paréntesis y la ruta o URL del recurso de imagen entre paréntesis. Opcionalmente, puede agregar un título entre comillas después de la ruta o URL.
@@ -210,8 +214,7 @@ Para agregar una imagen, agregue un signo de exclamación ( ! ), seguido del tex
 
 Una imagen con un enlace a una URL:
 
-[![N|Solid](.\markdown-mark-white.svg)](https://es.wikipedia.org/wiki/Markdown)
-
+[![N|Solid](.\markdown-mark.svg)](https://es.wikipedia.org/wiki/Markdown)
 
 
 ### Bloque de código
@@ -246,6 +249,7 @@ Markdown utiliza ciertos símbolos para el marcado. Si se utilizan, el analizado
 Para utilizar estos caracteres en sentido literal, solo debes insertar una barra invertida delante de cada uno de ellos. Es importante escribir la barra invertida antes de cada carácter, por ejemplo, tanto delante del paréntesis de apertura como del de cierre.
 
 Esto es un \*ejemplo con asteriscos\*.
+
 
 ### Comentarios
 
@@ -329,6 +333,7 @@ Los anchos de las celdas pueden variar, como se muestra a continuación. La sali
 
 Crear tablas con guiones y barras verticales puede resultar tedioso. Para acelerar el proceso, intente utilizar el [generador de tablas de Markdown](https://www.tablesgenerator.com/markdown_tables). Cree una tabla utilizando la interfaz gráfica y luego copie el texto generado con formato Markdown en su archivo.
 
+
 #### Alineación
 
 Puede alinear el texto de las columnas a la izquierda, a la derecha o al centro agregando dos puntos ( : ) a la izquierda, a la derecha o a ambos lados de los guiones dentro de la fila del encabezado.
@@ -337,6 +342,7 @@ Puede alinear el texto de las columnas a la izquierda, a la derecha o al centro 
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
+
 
 #### Formateo de texto en tablas
 
@@ -369,6 +375,7 @@ La sintaxis básica de Markdown le permite crear bloques de código sangrando la
   </body>
 </html>
 ~~~
+
 
 #### Resaltado de sintaxis
 
@@ -493,6 +500,7 @@ Necesito resaltar estas ==palabras muy importantes==.
 En HTML:  
 Necesito resaltar estas <mark>palabras muy importantes</mark>.
 
+
 ### Subíndice
 
 Para crear un subíndice, use un símbolo de tilde ( ~ ) antes y después de los caracteres.
@@ -517,6 +525,7 @@ X<sup>2</sup>
 
 Muchos procesadores de Markdown convierten automáticamente las URL en enlaces. Eso significa que si escribe http://www.example.com, su procesador Markdown lo convertirá automáticamente en un enlace aunque no haya usado corchetes.
 
+
 ### Deshabilitar vinculación de una URL
 
 Si no desea que una URL se vincule automáticamente, puede eliminar el enlace denotando la URL como código con acentos graves.
@@ -531,6 +540,13 @@ Las tabulaciones y los espacios en blanco tienen un significado especial en Mark
 Si su procesador Markdown es compatible con HTML, puedes usar la entidad HTML para el espacio de no separación ( `&nbsp;` ). Esta probablemente debería ser tu opción de último recurso, ya que puede resultar incómodo. Básicamente, cada `&nbsp;` en su fuente de Markdown se reemplazará con un espacio en la salida renderizada. Entonces, si coloca cuatro instancias de `&nbsp;` antes de un párrafo, el párrafo se verá como si tuviera una sangría de cuatro espacios.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Esta es la primera oración de mi párrafo con sangría.
+
+
+### Salto de página
+
+Al crear un documento en Markdown y querer exportarlo a un documento PDF nos llega la necesidad de realizar un salto de página, para ello usaremos la propiedad de CSS `page-break-after` o `page-break-before`.
+
+`<div style="page-break-before: always;"></div>`
 
 
 ### Centrar
@@ -593,6 +609,7 @@ A algunas personas les gusta crear enlaces que se abren en nuevas pestañas o ve
 ### Tabla de Contenidos
 
 Markdown admite [ID de encabezado](#id-de-encabezado), puede crear una tabla de contenido para su archivo Markdown usando una lista y algunos enlaces.
+
 
 #### Table of Contents
 
